@@ -7,8 +7,11 @@ function App() {
 function handleButtonIncrement(){
   setUserName(userName+1)
 }
-function handleButtonDescrement(){
+function handleButtonDecrement(){
   setUserName(userName-1)
+}
+function Reset(){
+  setUserName(0)
 }
   return (
     <div className="App">
@@ -17,7 +20,9 @@ function handleButtonDescrement(){
         <h2>{userName}</h2>
         <div className='buttons'>
         <button onClick={()=> handleButtonIncrement()}>+</button>
-        <button onClick={()=> handleButtonDescrement()}>-</button>
+        <button onClick={()=> handleButtonDecrement()}>-</button>
+        <button className='reset' onClick={()=> Reset()}>Reset</button>
+
         </div>
       </header>
     </div>
